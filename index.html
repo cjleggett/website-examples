@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Nav Bar</h1>
+
+    <button id="1" onclick="change(1)">Page 1</button>
+    <button id="2" onclick="change(2)">Page 2</button>
+    <button id="3" onclick="change(3)">Page 3</button>
+
+    <div id="page1">
+        <h2>Page 1</h2>
+    </div>
+
+    <div id="page2">
+        <h2>Page 2</h2>
+    </div>
+
+    <div id="page3">
+        <h2>Page 3</h2>
+    </div>
+
+
+    <script>
+        let page1 = document.getElementById('page1');
+        let page2 = document.getElementById('page2');
+        let page3 = document.getElementById('page3');
+        page1.style.display = "block";
+
+        function change(x) {
+            if (x === 1) {
+                page1.style.display = "block";
+                page2.style.display = "none";
+                page3.style.display = "none";
+            } else if (x === 2) {
+                page1.style.display = "none";
+                page2.style.display = "block";
+                page3.style.display = "none";
+            } else {
+                page1.style.display = "none";
+                page2.style.display = "none";
+                page3.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
